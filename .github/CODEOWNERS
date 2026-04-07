@@ -1,0 +1,9 @@
+# 기본 리뷰어 설정
+# 모든 파일 변경에 대해 아래 팀/사용자가 리뷰어로 자동 지정됩니다.
+# GitHub 사용자명 또는 팀명으로 변경하세요.
+
+* @your-team
+
+# 특정 디렉토리별 리뷰어 지정 예시
+# /src/main/ @backend-team
+# /.github/ @devops-team
