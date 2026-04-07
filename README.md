@@ -89,9 +89,14 @@ SonarCloud가 "uncovered lines"로 감지하는지 확인하기 위한 용도입
 ## SonarCloud 연동 방법
 
 1. [SonarCloud](https://sonarcloud.io)에 GitHub 계정으로 로그인
-2. "+" → "Analyze new project" → 해당 리포지토리 선택
-3. Project Key와 Organization 확인
-4. GitHub 리포지토리 → Settings → Secrets and variables → Actions에 시크릿 3개 등록:
+2. 우측 상단 프로필 아이콘 클릭 → My Account
+  - Security 탭 클릭               
+  - "Generate Tokens" 섹션에서:                            
+    - Token name: 아무 이름              
+    - Generate 클릭                                                                                                                            - 표시되는 토큰 복사
+3. "+" → "Analyze new project" → 해당 리포지토리 선택
+4. Project Key와 Organization 확인
+5. GitHub 리포지토리 → Settings → Secrets and variables → Actions에 시크릿 3개 등록:
    - `SONAR_TOKEN`: SonarCloud에서 발급받은 토큰
    - `SONAR_PROJECT_KEY`: SonarCloud 프로젝트 키
    - `SONAR_ORGANIZATION`: SonarCloud 조직명
@@ -113,10 +118,6 @@ SonarCloud에서 아래 조건으로 Quality Gate를 설정하세요:
 | 새 코드 버그 | = 0 |
 | 새 코드 취약점 | = 0 |
 | 새 코드 코드 스멜 | <= 5 |
-
-## 강사 테스트 체크리스트
-
-이 리포지토리로 워크플로우를 직접 돌려보며 아래 항목을 확인하세요.
 
 ### 사전 설정
 
