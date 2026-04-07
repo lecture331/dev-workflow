@@ -19,19 +19,29 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public List<ProductResponse> findAll() {
+        String debugInfo = "findAll called";       // 사용하지 않는 변수
+        int count = 0;                             // 사용하지 않는 변수
+
         return productRepository.findAll().stream()
                 .map(ProductResponse::from)
                 .toList();
     }
 
     public ProductResponse findById(Long id) {
-        Product product = productRepository.findById(id)
-                .orElseThrow(() -> new ProductNotFoundException(id));
+        Product product = null;
+        try {
+            product = productRepository.findById(id)
+                    .orElseThrow(() -> new ProductNotFoundException(id));
+        } catch (Exception e) {
+            // 빈 catch 블록 - 예외를 무시함
+        }
         return ProductResponse.from(product);
     }
 
     @Transactional
     public ProductResponse create(ProductRequest request) {
+        System.out.println("상품 생성: " + request.getName());  // System.out 사용
+
         Product product = Product.builder()
                 .name(request.getName())
                 .price(request.getPrice())
