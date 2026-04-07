@@ -1,9 +1,11 @@
-language: ko-KR  # 리뷰 코멘트 한국어
+language: ko-KR
 early_access: false
+tone_instructions: "한국어로 리뷰해주세요."
 reviews:
-  profile: assertive  # 'chill'(관대), 'assertive'(엄격)
+  profile: assertive
   request_changes_workflow: false
   high_level_summary: true
+  high_level_summary_placeholder: "@coderabbitai summary"
   poem: false
   review_status: true
   collapse_walkthrough: false

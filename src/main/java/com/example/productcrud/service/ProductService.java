@@ -73,4 +73,32 @@ public class ProductService {
         product.decreaseStock(quantity);
         return ProductResponse.from(product);
     }
+
+    // ========================================================================
+    // [SonarCloud 테스트용 코드]
+    // 아래 주석을 해제하면 SonarCloud Quality Gate에서 위반이 감지됩니다.
+    // PR 테스트 시 주석을 풀고 push하세요.
+    // ========================================================================
+
+    // --- 위반 1: 사용하지 않는 변수 (java:S1481) ---
+    // public void sonarTest_unusedVariable() {
+    //     String unused = "이 변수는 사용되지 않음";
+    //     int count = 0;
+    // }
+
+    // --- 위반 2: 빈 catch 블록 (java:S108) ---
+    // public void sonarTest_emptyCatch() {
+    //     try {
+    //         productRepository.findById(1L);
+    //     } catch (Exception e) {
+    //     }
+    // }
+
+    // --- 위반 3: System.out 사용 (java:S106) ---
+    // public void sonarTest_systemOut() {
+    //     System.out.println("디버깅용 출력");
+    // }
+
+    // --- 위반 4: 하드코딩된 비밀번호 (java:S6437) ---
+    // private String password = "admin1234";
 }
