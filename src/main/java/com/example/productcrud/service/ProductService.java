@@ -57,7 +57,7 @@ public class ProductService {
     }
 
     /**
-     * 재고 차감 메서드.
+     * 재고 차감 메서드
      * 이 메서드는 의도적으로 테스트가 작성되지 X
      * SonarCloud가 uncovered lines로 감지하는지 확인하기 위한 용도
      */
