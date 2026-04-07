@@ -81,24 +81,24 @@ public class ProductService {
     // ========================================================================
 
     // --- 위반 1: 사용하지 않는 변수 (java:S1481) ---
-    // public void sonarTest_unusedVariable() {
-    //     String unused = "이 변수는 사용되지 않음";
-    //     int count = 0;
-    // }
+     public void sonarTest_unusedVariable() {
+         String unused = "이 변수는 사용되지 않음";
+         int count = 0;
+     }
 
     // --- 위반 2: 빈 catch 블록 (java:S108) ---
-    // public void sonarTest_emptyCatch() {
-    //     try {
-    //         productRepository.findById(1L);
-    //     } catch (Exception e) {
-    //     }
-    // }
+     public void sonarTest_emptyCatch() {
+         try {
+             productRepository.findById(1L);
+         } catch (Exception e) {
+         }
+     }
 
     // --- 위반 3: System.out 사용 (java:S106) ---
-    // public void sonarTest_systemOut() {
-    //     System.out.println("디버깅용 출력");
-    // }
+     public void sonarTest_systemOut() {
+         System.out.println("디버깅용 출력");
+     }
 
     // --- 위반 4: 하드코딩된 비밀번호 (java:S6437) ---
-    // private String password = "admin1234";
+     private String password = "admin1234";
 }
