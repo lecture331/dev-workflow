@@ -95,7 +95,7 @@ SonarCloud가 "uncovered lines"로 감지하는지 확인하기 위한 용도입
     - Token name: 아무 이름              
     - Generate 클릭                                                                                                                            - 표시되는 토큰 복사
 3. "+" → "Analyze new project" → 해당 리포지토리 선택
-4. Project Key와 Organization 확인
+4. Project Key와 Organization 확인 => project information
 5. GitHub 리포지토리 → Settings → Secrets and variables → Actions에 시크릿 3개 등록:
    - `SONAR_TOKEN`: SonarCloud에서 발급받은 토큰
    - `SONAR_PROJECT_KEY`: SonarCloud 프로젝트 키
